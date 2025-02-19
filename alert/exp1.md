@@ -1,0 +1,1 @@
+[a](JaVaScRiPt:alert(1))

@@ -1,0 +1,42 @@
+┌──(root㉿kali)-[/home/kali/Desktop/htb/chemistry]
+└─# rustscan -a 10.10.11.38
+.----. .-. .-. .----..---.  .----. .---.   .--.  .-. .-.
+| {}  }| { } |{ {__ {_   _}{ {__  /  ___} / {} \ |  `| |
+| .-. \| {_} |.-._} } | |  .-._} }\     }/  /\  \| |\  |
+`-' `-'`-----'`----'  `-'  `----'  `---' `-'  `-'`-' `-'
+The Modern Day Port Scanner.
+________________________________________
+: http://discord.skerritt.blog         :
+: https://github.com/RustScan/RustScan :
+ --------------------------------------
+RustScan: Where '404 Not Found' meets '200 OK'.
+
+[~] The config file is expected to be at "/root/.rustscan.toml"
+[!] File limit is lower than default batch size. Consider upping with --ulimit. May cause harm to sensitive servers
+[!] Your file limit is very small, which negatively impacts RustScan's speed. Use the Docker image, or up the Ulimit with '--ulimit 5000'. 
+Open 10.10.11.38:22
+Open 10.10.11.38:5000
+[~] Starting Script(s)
+[~] Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-11-17 09:50 EST
+Initiating Ping Scan at 09:50
+Scanning 10.10.11.38 [4 ports]
+Completed Ping Scan at 09:50, 0.51s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 09:50
+Completed Parallel DNS resolution of 1 host. at 09:50, 0.17s elapsed
+DNS resolution of 1 IPs took 0.17s. Mode: Async [#: 2, OK: 0, NX: 1, DR: 0, SF: 0, TR: 1, CN: 0]
+Initiating SYN Stealth Scan at 09:50
+Scanning 10.10.11.38 [2 ports]
+Discovered open port 5000/tcp on 10.10.11.38
+Discovered open port 22/tcp on 10.10.11.38
+Completed SYN Stealth Scan at 09:50, 0.35s elapsed (2 total ports)
+Nmap scan report for 10.10.11.38
+Host is up, received echo-reply ttl 63 (0.45s latency).
+Scanned at 2024-11-17 09:50:30 EST for 0s
+
+PORT     STATE SERVICE REASON
+22/tcp   open  ssh     syn-ack ttl 63
+5000/tcp open  upnp    syn-ack ttl 63
+
+Read data files from: /usr/bin/../share/nmap
+Nmap done: 1 IP address (1 host up) scanned in 1.14 seconds
+           Raw packets sent: 6 (240B) | Rcvd: 50 (2.651KB)
